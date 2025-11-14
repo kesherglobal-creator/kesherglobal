@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 216 15% 24%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 216 15% 24%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 15% 24%;
+
+    /* Forest Tech - Verde Floresta (from city image) */
+    --primary-dark: 122 84% 20%;        /* #085C0A - Verde Floresta Escuro */
+    --primary-medium: 118 39% 18%;      /* #1D401C - Verde Médio Escuro */
+    --primary: 107 32% 50%;             /* #69A658 - Verde Natural */
+    --primary-light: 101 34% 62%;       /* #93BF7E - Verde Claro */
+    --primary-foreground: 0 0% 100%;
+    
+    /* Forest Tech - Accent Gold */
+    --accent: 101 34% 62%;              /* #93BF7E - Verde Claro para hover */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Forest Tech - Warm Gold Pop */
+    --gold: 40 77% 61%;                 /* #E8B44D - Dourado Suave */
+    --gold-foreground: 122 84% 20%;
+    
+    /* Neutral backgrounds */
+    --secondary: 90 4% 85%;             /* #D9DBD7 - Off-white Quente */
+    --secondary-foreground: 216 15% 24%;
+
+    --muted: 103 5% 74%;                /* #BABFB8 - Cinza Quente */
+    --muted-foreground: 216 15% 52%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 103 5% 74%;
+    --input: 103 5% 74%;
+    --ring: 107 32% 50%;
+
+    --radius: 0.5rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-emerald: 0 4px 12px rgba(105, 166, 88, 0.15);
+  }
+
+  .dark {
+    --background: 122 84% 20%;
+    --foreground: 0 0% 100%;
+
+    --card: 122 84% 20%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 122 84% 20%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary-dark: 122 84% 20%;
+    --primary-medium: 118 39% 18%;
+    --primary: 107 32% 50%;
+    --primary-light: 101 34% 62%;
+    --primary-foreground: 0 0% 100%;
+    
+    --accent: 101 34% 62%;
+    --accent-foreground: 0 0% 100%;
+    
+    --gold: 40 77% 61%;
+    --gold-foreground: 122 84% 20%;
+
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 65%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 107 32% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
