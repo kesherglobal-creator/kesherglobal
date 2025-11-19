@@ -258,5 +258,3 @@ const Approach = () => {
 
 export default Approach;
 
-
-export default Approach;
