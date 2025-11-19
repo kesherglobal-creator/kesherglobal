@@ -79,7 +79,7 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Strategic location analysis, office location, resources
                         </p>
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <Link
@@ -197,30 +197,31 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
             </NavigationMenuList>
           </NavigationMenu>
 
+          {/* --- DESKTOP MENU: Converted to Links --- */}
           <Link
             to="/why-northern-virginia"
             className="text-white hover:text-primary-light transition-colors font-medium text-lg"
           >
             Why Northern Virginia
           </Link>
-          <button
-            onClick={() => scrollToSection("engagement")}
+          <Link
+            to="/how-we-work" // FIXED: Converted from Button to Link
             className="text-white hover:text-primary-light transition-colors font-medium text-lg"
           >
             How We Work
-          </button>
+          </Link>
           <Link
             to="/about"
             className="text-white hover:text-primary-light transition-colors font-medium text-lg"
           >
             About Us
           </Link>
-          <button
-            onClick={() => scrollToSection("insights")}
+          <Link
+            to="/insights" // FIXED: Converted from Button to Link
             className="text-white hover:text-primary-light transition-colors font-medium text-lg"
           >
             Insights
-          </button>
+          </Link>
           <Link
             to="mailto:akotz@kesherglobal.com"
             className="text-white hover:text-primary-light transition-colors font-medium text-lg"
@@ -231,10 +232,12 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
             asChild
             className="bg-primary hover:bg-primary-light text-white"
           >
-            <Link to="mailto:akotz@kesherglobal.com">Schedule Consultation</a>
+            {/* FIXED: Closing tag was changed from </a> to </Link> */}
+            <Link to="mailto:akotz@kesherglobal.com">Schedule Consultation</Link>
           </Button>
         </div>
 
+        {/* --- MOBILE MENU --- */}
         <div className="lg:hidden">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -247,23 +250,23 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
                 <div>
                   <div className="text-lg font-bold mb-2">Services</div>
                   <div className="pl-4 space-y-2">
-                    <Link to="/services#market-entry" className="block text-sm text-muted-foreground hover:text-primary">Market Entry Strategy</a>
-                    <Link to="/services#site-selection" className="block text-sm text-muted-foreground hover:text-primary">Site Selection & Setup</a>
-                    <Link to="/services#business-dev" className="block text-sm text-muted-foreground hover:text-primary">Business Development</a>
-                    <Link to="/services#network" className="block text-sm text-muted-foreground hover:text-primary">Network & Introductions</a>
-                    <Link to="/services#talent" className="block text-sm text-muted-foreground hover:text-primary">Talent Acquisition</a>
+                    <Link to="/services#market-entry" className="block text-sm text-muted-foreground hover:text-primary">Market Entry Strategy</Link>
+                    <Link to="/services#site-selection" className="block text-sm text-muted-foreground hover:text-primary">Site Selection & Setup</Link>
+                    <Link to="/services#business-dev" className="block text-sm text-muted-foreground hover:text-primary">Business Development</Link>
+                    <Link to="/services#network" className="block text-sm text-muted-foreground hover:text-primary">Network & Introductions</Link>
+                    <Link to="/services#talent" className="block text-sm text-muted-foreground hover:text-primary">Talent Acquisition</Link>
                   </div>
                 </div>
                 
                 <div>
                   <div className="text-lg font-bold mb-2">Sectors</div>
                   <div className="pl-4 space-y-2">
-                    <Link to="/sectors#cybersecurity" className="block text-sm text-muted-foreground hover:text-primary">Cybersecurity</a>
-                    <Link to="/sectors#defense" className="block text-sm text-muted-foreground hover:text-primary">Defense Technology</a>
-                    <Link to="/sectors#healthcare" className="block text-sm text-muted-foreground hover:text-primary">Healthcare IT</a>
-                    <Link to="/sectors#ai" className="block text-sm text-muted-foreground hover:text-primary">AI & Machine Learning</a>
-                    <Link to="/sectors#fintech" className="block text-sm text-muted-foreground hover:text-primary">FinTech</a>
-                    <Link to="/sectors#datacenters" className="block text-sm text-muted-foreground hover:text-primary">Data Centers & Cloud</a>
+                    <Link to="/sectors#cybersecurity" className="block text-sm text-muted-foreground hover:text-primary">Cybersecurity</Link>
+                    <Link to="/sectors#defense" className="block text-sm text-muted-foreground hover:text-primary">Defense Technology</Link>
+                    <Link to="/sectors#healthcare" className="block text-sm text-muted-foreground hover:text-primary">Healthcare IT</Link>
+                    <Link to="/sectors#ai" className="block text-sm text-muted-foreground hover:text-primary">AI & Machine Learning</Link>
+                    <Link to="/sectors#fintech" className="block text-sm text-muted-foreground hover:text-primary">FinTech</Link>
+                    <Link to="/sectors#datacenters" className="block text-sm text-muted-foreground hover:text-primary">Data Centers & Cloud</Link>
                   </div>
                 </div>
 
@@ -273,24 +276,26 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
                 >
                   Why Northern Virginia
                 </Link>
-                <button
-                  onClick={() => scrollToSection("process")}
-                  className="text-lg font-medium hover:text-primary-light transition-colors text-left"
+                {/* MOBILE FIXED: Converted from Button to Link */}
+                <Link
+                  to="/how-we-work"
+                  className="text-lg font-medium hover:text-primary-light transition-colors text-left block"
                 >
                   How We Work
-                </button>
+                </Link>
                 <Link
                   to="/about"
                   className="text-lg font-medium hover:text-primary-light transition-colors text-left block"
                 >
                   About Us
                 </Link>
-                <button
-                  onClick={() => scrollToSection("insights")}
-                  className="text-lg font-medium hover:text-primary-light transition-colors text-left"
+                {/* MOBILE FIXED: Converted from Button to Link */}
+                <Link
+                  to="/insights"
+                  className="text-lg font-medium hover:text-primary-light transition-colors text-left block"
                 >
                   Insights
-                </button>
+                </Link>
                 <Link
                   to="mailto:akotz@kesherglobal.com"
                   className="text-lg font-medium hover:text-primary-light transition-colors text-left block"
@@ -301,7 +306,8 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
                   asChild
                   className="bg-primary hover:bg-primary-light text-white w-full mt-4"
                 >
-                  <Link to="mailto:akotz@kesherglobal.com">Schedule Consultation</a>
+                  {/* FIXED: Closing tag was changed from </a> to </Link> */}
+                  <Link to="mailto:akotz@kesherglobal.com">Schedule Consultation</Link>
                 </Button>
               </div>
             </SheetContent>
