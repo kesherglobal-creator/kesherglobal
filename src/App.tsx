@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'; // NEW: Added React hooks
-import { builder, BuilderComponent } from '@builder.io/react'; // NEW: Builder components
-import { Toaster } from "@components/ui/toaster";
-import { Sonner } from "@components/ui/sonner";
-import { TooltipProvider } from "@components/ui/tooltip";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; // NEW: Added useLocation
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { BuilderComponent, builder } from "@builder.io/react";
 import Index from "./pages/Index";
 import WhyNorthernVirginia from "./pages/WhyNorthernVirginia";
 import AboutUs from "./pages/AboutUs";
