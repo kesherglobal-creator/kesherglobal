@@ -8,32 +8,52 @@ import { BuilderComponent, builder } from "@builder.io/react";
 import Index from "./pages/Index";
 import WhyNorthernVirginia from "./pages/WhyNorthernVirginia";
 import AboutUs from "./pages/AboutUs";
+import Approach from "./pages/Approach";
+import Insights from "./pages/Insights";
 import NotFound from "./pages/NotFound";
-const BuilderPage = () => {
-    const { pathname } = useLocation();
-    
-    // We use useState to hold the content data fetched from Builder
-    const [content, setContent] = useState(null); 
 
-    useEffect(() => {
-        // Fetch content for the current URL path
-        builder.get('page', { url: pathname })
-            .promise()
-            .then((data) => {
-                // Set the content data if found
-                setContent(data);
-            });
-    }, [pathname]);
+// Initialize Builder.io with your API key
+builder.init("142191b903224201bba966351916aa13");
 
-    // If no content is found after checking Builder, render the 404 page
-    if (content === null) {
-        return <NotFound />; 
-    }
-    
-    // Render the Builder content visually
-    return <BuilderComponent model="page" content={content} />;
-};
 const queryClient = new QueryClient();
+
+// BuilderPage component for dynamic Builder.io content
+const BuilderPage = () => {
+  const { pathname } = useLocation();
+  
+  const contentPath = pathname.substring(1);
+  const [content, setContent] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    setLoading(true);
+    builder
+      .get('page', { url: contentPath })
+      .promise()
+      .then((data) => {
+        setContent(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setContent(null);
+        setLoading(false);
+      });
+  }, [contentPath]);
+  
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-xl">Loading...</div>
+      </div>
+    );
+  }
+  
+  if (content === null) {
+    return <NotFound />;
+  }
+  
+  return <BuilderComponent model="page" content={content} />;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -42,10 +62,15 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Hardcoded pages from code */}
           <Route path="/" element={<Index />} />
           <Route path="/why-northern-virginia" element={<WhyNorthernVirginia />} />
           <Route path="/about" element={<AboutUs />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/approach" element={<Approach />} />
+          <Route path="/how-we-work" element={<Approach />} />
+          <Route path="/insights" element={<Insights />} />
+          
+          {/* Catch-all route for Builder.io dynamic pages */}
           <Route path="*" element={<BuilderPage />} />
         </Routes>
       </BrowserRouter>
