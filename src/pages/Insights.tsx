@@ -180,14 +180,14 @@ const Insights = () => {
         <section className="insights-articles-section">
           <div className="insights-container">
             {filteredArticles.length > 0 ? (
-              <div className="insights-articles-grid">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredArticles.map((article) => (
-                  <article key={article.id} className="insights-article-card fade-in-section">
+                  <article key={article.id} className="p-4 border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in-section">
                     <div className="insights-article-image-wrapper">
                       <img src={article.image} alt={article.title} className="insights-article-image" />
                     </div>
 
-                    <div className="insights-article-content">
+                    <div className="pt-4 space-y-2">
                       <div className="insights-article-meta-top">
                         <span className="insights-category-badge">{article.category}</span>
                       </div>
