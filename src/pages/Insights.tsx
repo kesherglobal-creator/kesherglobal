@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import '../App.css'; 
 
 const Insights = () => {
   const [currentFilter, setCurrentFilter] = useState("All");
