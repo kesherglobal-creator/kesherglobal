@@ -142,10 +142,10 @@ const Insights = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="insights-hero">
-          <div className="insights-hero-content">
-            <h1 className="fade-in-section">Insights & Market Intelligence</h1>
-            <p className="fade-in-section">Expert analysis on US market entry, tech ecosystems, and cross-border expansion strategies for global innovators.</p>
+        <section className="py-20 text-center bg-gray-50"> // Added vertical padding and light background
+          <div className="max-w-4xl mx-auto px-4"> // Standard container for centering
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 fade-in-section">Insights & Market Intelligence</h1>
+            <p className="text-xl text-gray-600 fade-in-section">Expert analysis on US market entry, tech ecosystems, and cross-border expansion strategies for global innovators.</p>
           </div>
         </section>
 
@@ -166,7 +166,11 @@ const Insights = () => {
               {filterCategories.map((category) => (
                 <button
                   key={category}
-                  className={`insights-filter-btn ${currentFilter === category ? "active" : ""}`}
+                  className={`px-4 py-2 text-sm rounded-full border transition-colors ${
+  currentFilter === category
+    ? "bg-primary-dark text-white border-primary-dark"
+    : "bg-white text-gray-600 border-gray-300 hover:bg-gray-100"
+}`}
                   onClick={() => setCurrentFilter(category)}
                 >
                   {category}
