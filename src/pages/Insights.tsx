@@ -164,13 +164,15 @@ const Insights = () => {
 
             <div className="insights-filters fade-in-section">
               {filterCategories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-4 py-2 text-sm rounded-full border transition-colors font-medium cursor-pointer ${
-    currentFilter === category
+    <button
+    key={category}
+    className={`px-4 py-2 text-sm rounded-full border transition-colors font-medium cursor-pointer ${
+        currentFilter === category
         ? "bg-primary-dark text-white border-primary-dark shadow-md"
         : "bg-white text-gray-600 border-gray-300 hover:bg-gray-100"
-}`}
+    }`}
+    onClick={() => setCurrentFilter(category)}
+>
                   onClick={() => setCurrentFilter(category)}
                 >
                   {category}
