@@ -174,7 +174,7 @@ const Insights = () => {
     onClick={() => setCurrentFilter(category)}
 >
                   onClick={() => setCurrentFilter(category)}
-                >
+
                   {category}
                 </button>
               ))}
