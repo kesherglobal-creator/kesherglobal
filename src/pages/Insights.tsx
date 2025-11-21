@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import '../App.css'; 
 
 const filterCategories = ["All", "Technology", "Strategy", "Regulation", "Market Entry"];
