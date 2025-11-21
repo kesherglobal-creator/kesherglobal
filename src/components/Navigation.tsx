@@ -44,7 +44,7 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary-dark shadow-md`}
     >
-      <div className="container mx-auto px-16 lg:px-20 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-16 lg:px-20 py-3 flex items-center justify-between">
         <Link to="/" className="cursor-pointer flex items-center">
           <img src={logoWhite} alt="Kesher Global" className="h-32 lg:h-36" />
         </Link>
