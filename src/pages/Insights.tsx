@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import '../App.css'; 
@@ -14,7 +14,7 @@ const Insights: React.FC<InsightsProps> = ({ setContactModalOpen }) => {
   const [currentSearchTerm, setCurrentSearchTerm] = useState("");
 
   const filteredArticles = useMemo(() => {
-    return articleData
+    return articles // Reference the data array defined above
       .filter(article => currentFilter === "All" || article.category === currentFilter)
       .filter(article =>
         article.title.toLowerCase().includes(currentSearchTerm.toLowerCase()) ||
