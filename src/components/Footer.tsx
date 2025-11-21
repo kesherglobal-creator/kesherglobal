@@ -8,7 +8,8 @@ const Footer = () => {
           <div className="text-2xl font-bold tracking-tight">KESHER GLOBAL</div>
           
           <div className="flex flex-wrap justify-center items-center gap-4 text-lg">
-            <span>Fairfax County, Virginia</span>
+            <span>1640 Boro Place, 4th Flr</span>
+            <span>McLean, Virginia 22102, United States</span>
             <span className="hidden sm:inline">•</span>
             <a href="mailto:akotz@kesherglobal.com" className="hover:text-primary-light transition-colors">
               akotz@kesherglobal.com
