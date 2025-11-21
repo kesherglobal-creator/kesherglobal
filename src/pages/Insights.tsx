@@ -229,3 +229,10 @@ const Insights = () => {
           </div>
         </section>
       </main>
+
+  <Footer />
+    </div>
+  );
+};
+
+export default Insights;
