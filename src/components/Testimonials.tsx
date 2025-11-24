@@ -20,7 +20,7 @@ const testimonials = [
   {
     quote: "Asher is a dedicated business development professional. I enjoyed his focus and attention to detail related to driving introductions and connection for our firm and external organizations. Asher was always quick to respond to any request and had a great sense of urgency.",
     name: "Christy Serrato",
-    title: "VP Development Services"
+    title: "CEO, PairAnything"
   },
   {
     quote: "Asher is smart-strong in all things related to business dev. He is solid on operation and process implementation as well as execution. Demonstrated flexibility to juggle multiple priority requirements and got it all right. Very sharp.",
