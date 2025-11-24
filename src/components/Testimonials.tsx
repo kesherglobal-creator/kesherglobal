@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote: "Asher is smart-strong in all things related to business dev. He is solid on operation and process implementation as well as execution. Demonstrated flexibility to juggle multiple priority requirements and got it all right. Very sharp.",
-    name: "Frank Yan",
+    name: "Frank Yeh",
     title: "CEO of Blaicnet Cyber and Serial Entrepreneur"
   },
   {
