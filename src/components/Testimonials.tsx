@@ -3,9 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    quote: "Working with Asher for a few years with my company and with other companies in my investment portfolio. He is very knowledgeable, has lots of connections and helps companies with their US strategy and execute, good salesmen and helps portfolio companies with fundraising recruiting.",
-    name: "Ofer Elran",
-    title: "Managing Partner at MoreWe Investing"
+    quote: "I've had the pleasure of working with Asher Kotz for over 15 years, through my work at ProductSavvy. Asher has an exceptional ability to connect Israeli companies with the Fairfax County business ecosystem, offering the right introductions, insights, and resources to accelerate their success. Asher has also excelled in organizing impactful events where I've presented, always with a clear focus on showcasing real business opportunities and practical go-to-market strategies for international ventures entering the U.S. market. Asher's professionalism, insight, and long-term commitment to innovation make him an invaluable partner in the ecosystem. I highly recommend him.",
+    name: "Jonathan Chashper",
+    title: "CEO at Product Savvy Consulting"
   },
   {
     quote: "I have worked with Asher for more than 15 years to support our growth in the U.S. Market. He has unique skills of business development and strategic planning to effectively engage with partners and customers to enable our sales ramp up activity. We wish Asher a good and solid success journey and we are keen to enhance our U.S. business activities with his kind support.",
@@ -13,14 +13,14 @@ const testimonials = [
     title: "CEO at GreenVision Systems"
   },
   {
-    quote: "Asher is a dedicated business development professional. I enjoyed his focus and attention to detail related to driving introductions and connection for our firm and external organizations. Asher was always quick to respond to any request and had a great sense of urgency.",
-    name: "Christy R.",
-    title: "VP Development Services"
+    quote: "I have had the pleasure of working closely with Asher Kotz over several years to develop a strong working partnership between Fairfax Water and the Fairfax County EDA. We have collaborated with Asher to introduce important and innovative technologies developed by Israeli companies into the Norther Virginia ecosystem. Asher organized what has proven to be a very successful technology and business events, which I enjoyed the opportunity to participate in and speak.",
+    name: "Phil Allin",
+    title: "Chairman at Fairfax Water and EVP at Guernsey"
   },
   {
-    quote: "I've had the pleasure of working with Asher Kotz for over 15 years, through my work at ProductSavvy. Asher has an exceptional ability to connect Israeli companies with the Fairfax County business ecosystem, offering the right introductions, insights, and resources to accelerate their success. Asher has also excelled in organizing impactful events where I've presented, always with a clear focus on showcasing real business opportunities and practical go-to-market strategies for international ventures entering the U.S. market. Asher's professionalism, insight, and long-term commitment to innovation make him an invaluable partner in the ecosystem. I highly recommend him.",
-    name: "Jonathan Chashper",
-    title: "CEO at Product Savvy Consulting"
+    quote: "Asher is a dedicated business development professional. I enjoyed his focus and attention to detail related to driving introductions and connection for our firm and external organizations. Asher was always quick to respond to any request and had a great sense of urgency.",
+    name: "Christy Serrato",
+    title: "VP Development Services"
   },
   {
     quote: "Asher is smart-strong in all things related to business dev. He is solid on operation and process implementation as well as execution. Demonstrated flexibility to juggle multiple priority requirements and got it all right. Very sharp.",
@@ -28,9 +28,9 @@ const testimonials = [
     title: "CEO of Blaicnet Cyber and Serial Entrepreneur"
   },
   {
-    quote: "Asher always delivered a very high level of service to the businesses of Fairfax County. He regularly worked with tech companies from all over the world including Israel, UK, Canada, and India. His business acumen is strong and together, I would definitely have Asher on my team.",
-    name: "Daniel Plaksin",
-    title: "CPA Sr. Tax and Business Management Executive"
+    quote: "During my tenure at Aladdin, it was my pleasure to work with Asher in his role as Business Development Director. Asher always delivered a very high level of service to the business partnerships that he developed and to that effect he was always willing to get on a plane and travel to customer sites to ensure the customer/partner needs were addressed. Asher conducts himself in a professional manner and has a very personable demeanor. I would certainly recommend Asher for future BD roles. He is a great guy who will always give a company his 110% effort.",
+    name: "Daniel Pfeifler",
+    title: "Vice President, Director, Sales Management Executive"
   }
 ];
 
