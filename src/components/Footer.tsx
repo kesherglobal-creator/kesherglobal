@@ -22,7 +22,7 @@ const Footer = () => {
 
           <div className="flex justify-center items-center gap-6 pt-4">
             <a
-              href="https://www.linkedin.com/in/asherkotz/"
+              href="https://www.linkedin.com/company/kesherglobal/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-primary-light hover:scale-110 transition-all duration-200"
